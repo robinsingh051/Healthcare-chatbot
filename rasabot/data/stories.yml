@@ -1,0 +1,70 @@
+version: "3.1"
+
+stories:
+  - story: happy path
+    steps:
+      - intent: greet
+      - action: utter_greet
+
+  - story: not_well_path
+    steps:
+      - intent: not_well
+      - action: utter_not_well
+
+  - story: well_path
+    steps:
+      - intent: well
+      - action: utter_well
+
+  - story: cold_sym_path
+    steps:
+      - intent: cold_sym
+      - action: utter_cold_sym
+      - intent: cold_confirm
+      - action: utter_cold_med
+      - action: utter_feedback
+
+  - story: med_not_helped_path
+    steps:
+      - intent: med_not_helped
+      - action: utter_med_not_helped
+
+  - story: med_helped_path
+    steps:
+      - intent: med_helped
+      - action: utter_med_helped
+
+  - story: fever_sym_path
+    steps:
+      - intent: fever_sym
+      - action: utter_fever_med
+      - action: utter_feedback
+
+  - story: fracture_sym_path
+    steps:
+      - intent: fracture_sym
+      - action: utter_fracture_sym
+      - intent: fracture_accepted
+      - action: utter_fracture_details
+      - intent: fracture_details
+      - action: utter_fracture_confirm
+
+  - story: headache_path
+    steps:
+      - intent: headache
+      - action: utter_headache_type
+
+  - story: migrane_path
+    steps:
+      - intent: migrane
+      - action: utter_migrane
+
+  - story: cluster_headache_path
+    steps:
+      - intent: cluster_headache
+      - action: utter_cluster_headache
+
+  - story: tension_headache_path
+    steps:
+      - intent: tension_headache
+      - action: utter_tension_headache
